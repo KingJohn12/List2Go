@@ -26,39 +26,59 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+- [ ] User can sign up/login
+- [ ] User can log out
+- [ ] User can enter items in a list
+- [ ] User can enter quantities in a list
+- [ ] User can modify/delete items in a list
+- [ ] User can modify/delete quantities in list
+- [ ] User can enter prices and calculate total
+- [ ] User is able to save their list (up to certain number of items)
+- [ ] User is able to see stores near their location
+- [ ] User is able to see profile with name
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+- [ ] User is able to see saved list in profile
+- [ ] User gets suggestions on which store is best for which products based on search
+- [ ] User get suggestions on best deals in the area based on search
+- [ ] User gets suggestions on best brands based on search
+- [ ] User is able to add suggestions to grocery list
+- [ ] User is able to view suggestions on best way to buy groceries
+- [ ] User is able to see which stores includes best deals and brands on their grocery list
+
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login / Register
+   * User can sign up/login
+* Creation
+   * User can enter items in a list
+   * User can enter quantities in a list
+   * User can modify/delete items in a list
+   * User can modify/delete quantities in list
+   * User can enter prices and calculate total
+   * User is able to save their list (up to certain number of items)
+* Detail
+   * User is able to see stores near their location
+* Profile
+   * User is able to see profile with name
+   * User can log out
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Grocery List
+* Map
+* Profile
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login / Register
+   * Grocery List
+   * Map
+   * Profile
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
