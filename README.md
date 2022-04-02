@@ -18,7 +18,7 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 - **Story:** This app can help people who shift to new cities or don't know their surrondings well and need help figuring out how to get what they need without wasting time on doing all the research.
 - **Market:** The main market will be anyone who moves, but it can also include people who are interested in learning about stores in their cities or for deals
 - **Habit:** The user could use this app potentially any time they want to buy groceries, and the user can create tasks while consuming the data that the app provides
-- **Scope:**
+- **Scope:** It will be a challenge to complete this project, because although the ground level version of the app is very basic, we want to implement new features that we have not done before.
 
 ## Product Spec
 
