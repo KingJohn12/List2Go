@@ -64,6 +64,7 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 * Profile
    * User is able to see profile with name
    * User can log out
+   * User is able to see saved list
 
 ### 3. Navigation
 
@@ -89,10 +90,39 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+User
+Property | Type | Description 
+--- | --- | --- 
+username | String | id that user creates
+password | String | password that user creates
+userId | String | unique id of the created user when created
+list | Pointer | pointer to grocery list that user saved to profile
+location | JSONObject | current location of user
+
+List
+Property | Type | Description 
+--- | --- | --- 
+item | String | name of item that usre wants to buy
+quantity | Number | quantity of item that user wants
+price | Number | price of 1 item
+
 ### Models
 [Add table of models]
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Login / Register Screen
+   - (Create/USER) User can sign up
+   - (Read/GET) User can login
+- List Screen
+   - (Create/LIST) User can enter items in a list
+   - (Create/LIST) User can enter quantities in a list
+   - (Create/LIST) User can modify/delete items in a list
+   - (Create/LIST) User can modify/delete quantities in list
+   - (Create/LIST) User can enter prices and calculate total
+   - (Update/PUT) User is able to save their list (up to certain number of items)
+- Maps Screen
+   -(Read/GET) User is able to see stores near their location
+- Profile
+   - (Read/GET) User is able to see profile with name
+   - User can log out
+   - (Read/GET) User is able to see new list
