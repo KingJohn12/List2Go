@@ -83,7 +83,7 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![wireframe](/Wireframe.jpg-1.jpeg)
 
 ### [BONUS] Digital Wireframes & Mockups
 
