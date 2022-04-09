@@ -105,7 +105,7 @@ Property | Type | Description
 item | String | name of item that usre wants to buy
 quantity | Number | quantity of item that user wants
 price | Number | price of 1 item
-author | String | List author
+author | Pointer | List author
 
 
 ### Models
