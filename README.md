@@ -102,7 +102,7 @@ location | JSONObject | current location of user
 List
 Property | Type | Description 
 --- | --- | --- 
-item | String | name of item that usre wants to buy
+item | String | name of item that user wants to buy
 quantity | Number | quantity of item that user wants
 price | Number | price of 1 item
 author | Pointer | List author
