@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">List2Go</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">aUkiaVlfjO64C4nTM6pq7KKfyvnAAQKf5SrI09O9</string>
+    <string name="back4app_client_key">SHSmvu20LFq006Rny72o1pR4PFU6d22JjoqEyrCZ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
