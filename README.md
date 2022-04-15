@@ -26,7 +26,7 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 
 **Required Must-have Stories**
 
-- [ ] User can sign up/login
+- [x] User can sign up/login
 - [ ] User can log out
 - [ ] User can enter items in a list
 - [ ] User can enter quantities in a list
