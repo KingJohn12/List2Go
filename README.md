@@ -5,6 +5,7 @@
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
+3. [GIFS](#GIFS)
 
 ## Overview
 ### Description
@@ -128,3 +129,7 @@ author | Pointer | List author
    - (Read/GET) User is able to see profile with name
    - User can log out
    - (Read/GET) User is able to see new list
+
+## GIFS
+![Signup](/media/signup.gif)
+![Login](/media/login.gif)
