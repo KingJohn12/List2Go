@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         if (ParseUser.getCurrentUser() != null) {
-            goToMainActivity()
+            //goToMainActivity()
         }
 
         findViewById<Button>(R.id.login_button).setOnClickListener {
@@ -40,9 +40,10 @@ class LoginActivity : AppCompatActivity() {
 
         user.signUpInBackground { e->
             if (e == null) {
-
+                Log.i(TAG, "Successfully logged in user")
+                goToMainActivity()
             } else {
-
+                e.printStackTrace()
             }
         }
     }
