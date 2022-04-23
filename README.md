@@ -131,5 +131,4 @@ author | Pointer | List author
    - (Read/GET) User is able to see new list
 
 ## GIFS
-![Signup](/media/signup.gif)
-![Login](/media/login.gif)
+<img src="/media/signup.gif" width="25%" height="25%"/><img src="/media/login.gif" width="25%" height="25%"/><img src="/media/screens-logout.gif" width="25%" height="25%"/>
