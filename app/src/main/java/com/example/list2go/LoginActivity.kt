@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         if (ParseUser.getCurrentUser() != null) {
-            //goToMainActivity()
+            goToMainActivity()
         }
 
         findViewById<Button>(R.id.login_button).setOnClickListener {
