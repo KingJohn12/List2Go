@@ -28,8 +28,8 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 **Required Must-have Stories**
 
 - [x] User can sign up/login
-- [ ] User can log out
-- [ ] User can enter items in a list
+- [x] User can log out
+- [] User can enter items in a list
 - [ ] User can enter quantities in a list
 - [ ] User can modify/delete items in a list
 - [ ] User can modify/delete quantities in list
