@@ -9,7 +9,11 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import com.example.list2go.ListAdapter
+import com.example.list2go.ListItem
 import com.example.list2go.R
+import com.parse.ParseUser
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 /**
@@ -30,51 +34,43 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // holds list of tasks
-        var listOfTasks = mutableListOf<String>()
+        var listOfItems = mutableListOf<String>()
         // creates variable reference here that will be initialized later
         lateinit var adapter: ListAdapter
-
-            // variable for onClickListener
-            val onLongClickListener = object : ListAdapter.OnLongClickListener {
-                override fun onItemLongClicked(position: Int) {
-                    // remove item from list
-                    listOfTasks.removeAt(position)
-                    // notify adapter that data set has changed
-                    adapter.notifyItemRemoved(position)
-                    // check for action in Logcat
-                    // Log.i("Caren", "Trying to remove")
-                    // save new list of items
-                }
-
-            }
-
-            // Fake list of tasks
-            listOfTasks.add("Do laundry")
-            listOfTasks.add("Go for a walk")
 
 
             // Lookup the recyclerview in activity layout
             val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
             // Create adapter passing in the sample user data
-            adapter = ListAdapter(listOfTasks, onLongClickListener)
+            adapter = ListAdapter(listOfItems)
             // Attach the adapter to the recyclerview to populate items
             recyclerView.adapter = adapter
             // Set layout manager to position the items
             //recyclerView.layoutManager = LinearLayoutManager(this)
 
             // set up the button and input field so that the user can enter a task and add it to the list
-            val inputTestField = view.findViewById<EditText>(R.id.addItem)
+            val inputItem = view.findViewById<EditText>(R.id.addItem)
+            val inputQuantity = view.findViewById<EditText>(R.id.addQuantity)
+            val inputPrice = view.findViewById<EditText>(R.id.addPrice)
 
             // get a reference to the button, and set an onClickListener
             view.findViewById<Button>(R.id.addButton).setOnClickListener {
-                // grab test that user inputted into @id/addTaskField
-                val userInputtedTask = inputTestField.text.toString()
+                // grab text that user inputted into @id/addItem, @id/addQuantity, and @id/addPrice
+                val userInputtedItem = inputItem.text.toString()
+                val userInputtedQ = inputQuantity.text.toString()
+                val userInputtedPrice = inputPrice.text.toString()
+                // get current user
+                val user = ParseUser.getCurrentUser()
                 // add string to list of tasks: listOfTasks
-                listOfTasks.add(userInputtedTask)
+                listOfItems.add(userInputtedItem + ", " + userInputtedPrice + ", " + userInputtedQ)
                 // notify adapter that data has been updated
-                adapter.notifyItemInserted(listOfTasks.size - 1)
+                adapter.notifyItemInserted(listOfItems.size - 1)
                 // reset text field
-                inputTestField.setText("")
+                inputItem.setText("")
+                inputQuantity.setText("")
+                inputPrice.setText("")
+                // save items
+                saveItems(userInputtedItem, userInputtedPrice.toBigDecimal(), userInputtedQ.toBigInteger(), user)
             }
 
     }
@@ -86,7 +82,23 @@ class ListFragment : Fragment() {
     }
 
     // save items
-    fun saveItems() {
+    fun saveItems(item: String, price: Number, quantity: Number,  user: ParseUser) {
+        // create ListItem object
+        val listItem = ListItem()
+        // set item, price, quantity and user
+        listItem.setItem(item)
+        listItem.setPrice(price)
+        listItem.setQuantity(quantity)
+        listItem.setUser(user)
+        // save
+        listItem.saveInBackground { exception ->
+            if (exception != null) {
+                // something went wrong
+                exception.printStackTrace()
+            } else {
+                // successful
+            }
 
+        }
     }
 }

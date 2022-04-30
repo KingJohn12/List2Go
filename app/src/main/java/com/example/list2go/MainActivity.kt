@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.list2go.fragments.ListFragment
+import com.example.list2go.fragments.MapFragment
 import com.example.list2go.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parse.ParseUser
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.action_map -> {
                     // navigate to map screen
+                    fragmentToShow = MapFragment()
                     Toast.makeText(this, "Map", Toast.LENGTH_SHORT).show()
                 }
                 R.id.action_logout -> {

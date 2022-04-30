@@ -18,12 +18,30 @@
     <EditText
         android:id="@+id/addItem"
         android:layout_margin="10dp"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:hint="Item"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addButton"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/addQuantity"
+        android:layout_margin="10dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:hint="#"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addItem" />
+
+    <EditText
+        android:id="@+id/addPrice"
+        android:layout_margin="10dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:hint="$$"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintStart_toEndOf="@+id/addQuantity" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

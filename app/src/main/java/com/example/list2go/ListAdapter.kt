@@ -6,12 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter (val listOfItems: List<String>, val longClickListener: OnLongClickListener) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class ListAdapter (val listOfItems: List<String>) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
-    // reference to longClickListener for deletion
-    interface OnLongClickListener {
-        fun onItemLongClicked(position: Int)
-    }
 
     // Usually involves inflating a layout from XML and returning the holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,15 +37,6 @@ class ListAdapter (val listOfItems: List<String>, val longClickListener: OnLongC
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Store references to elements in our layout view
         val textView: TextView = itemView.findViewById(android.R.id.text1)
-
-        init {
-
-            // set a listener
-            itemView.setOnLongClickListener{
-                longClickListener.onItemLongClicked(adapterPosition)
-                true
-            }
-        }
     }
 
 }
