@@ -1,4 +1,4 @@
-# List2Go
+# List2Go: Valli Mahavadi
 
 ## Table of Contents
 1. [Overview](#Overview)
