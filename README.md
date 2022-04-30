@@ -29,17 +29,18 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 
 - [x] User can sign up/login
 - [x] User can log out
-- [] User can enter items in a list
+- [ ] User can enter items in a list
 - [ ] User can enter quantities in a list
-- [ ] User can modify/delete items in a list
-- [ ] User can modify/delete quantities in list
-- [ ] User can enter prices and calculate total
-- [ ] User is able to save their list (up to certain number of items)
-- [ ] User is able to see stores near their location
-- [ ] User is able to see profile with name
+- [ ] User can enter prices
+- [x] User is able to see stores near their location
+- [x] User is able to see profile with name
 
 **Optional Nice-to-have Stories**
 
+- [ ] User can modify/delete items in a list
+- [ ] User can modify/delete quantities in list
+- [ ] User can calculate total
+- [ ] User is able to save their list (up to certain number of items)
 - [ ] User is able to see saved list in profile
 - [ ] User gets suggestions on which store is best for which products based on search
 - [ ] User get suggestions on best deals in the area based on search
