@@ -29,14 +29,17 @@ suggestions to the user such as the nearest grocery shops, the best deals, and t
 
 - [x] User can sign up/login
 - [x] User can log out
-- [ ] User can enter items in a list
-- [ ] User can enter quantities in a list
-- [ ] User can enter prices
+- [x] User can see items in a list
+- [x] User can see quantities in a list
+- [x] User can see prices
 - [x] User is able to see stores near their location
 - [x] User is able to see profile with name
 
 **Optional Nice-to-have Stories**
 
+- [ ] User can enter items in a list
+- [ ] User can enter quantities in a list
+- [ ] User can enter prices
 - [ ] User can modify/delete items in a list
 - [ ] User can modify/delete quantities in list
 - [ ] User can calculate total
@@ -132,4 +135,4 @@ author | Pointer | List author
    - (Read/GET) User is able to see new list
 
 ## GIFS
-<img src="/media/signup.gif" width="25%" height="25%"/><img src="/media/login.gif" width="25%" height="25%"/><img src="/media/screens-logout.gif" width="25%" height="25%"/>
+<img src="/media/signup.gif" width="25%" height="25%"/><img src="/media/login.gif" width="25%" height="25%"/><img src="/media/screens-logout.gif" width="25%" height="25%"/><img src="/media/screens.gif" width="25%" height="25%"/>
