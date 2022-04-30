@@ -50,7 +50,7 @@
         app:layout_constraintBottom_toTopOf="@+id/addItem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemTextBox" />
+        app:layout_constraintTop_toBottomOf="@+id/sample" />
 
     <TextView
         android:id="@+id/itemTextBox"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/priceTextBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Price"
@@ -79,4 +79,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/quantityTextBox"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantityTextBox"
+        app:srcCompat="@drawable/list"
+        tools:srcCompat="@drawable/list" />
 </androidx.constraintlayout.widget.ConstraintLayout>

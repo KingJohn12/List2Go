@@ -23,6 +23,9 @@ import kotlin.collections.ArrayList
  */
 class ListFragment : Fragment() {
 
+    // holds list of tasks
+    var listOfItems = mutableListOf<ListItem>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,8 +36,7 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // holds list of tasks
-        var listOfItems = mutableListOf<String>()
+
         // creates variable reference here that will be initialized later
         lateinit var adapter: ListAdapter
 
@@ -61,20 +63,17 @@ class ListFragment : Fragment() {
                 val userInputtedPrice = inputPrice.text.toString()
                 // get current user
                 val user = ParseUser.getCurrentUser()
-                // add string to list of tasks: listOfTasks
-                listOfItems.add(userInputtedItem + ", " + userInputtedPrice + ", " + userInputtedQ)
-                // notify adapter that data has been updated
-                adapter.notifyItemInserted(listOfItems.size - 1)
                 // reset text field
                 inputItem.setText("")
                 inputQuantity.setText("")
                 inputPrice.setText("")
                 // save items
                 saveItems(userInputtedItem, userInputtedPrice.toBigDecimal(), userInputtedQ.toBigInteger(), user)
+                // notify adapter that data has been updated
+                adapter.notifyItemInserted(listOfItems.size - 1)
             }
 
     }
-    // Save the data that the user has inputted
 
     // load tasks from profile
     fun loadItems() {
@@ -90,6 +89,8 @@ class ListFragment : Fragment() {
         listItem.setPrice(price)
         listItem.setQuantity(quantity)
         listItem.setUser(user)
+        // add string to list of tasks: listOfTasks
+        listOfItems.add(listItem)
         // save
         listItem.saveInBackground { exception ->
             if (exception != null) {

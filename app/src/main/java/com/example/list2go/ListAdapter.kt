@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter (val listOfItems: List<String>) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
-
+class ListAdapter (val listOfItems: List<ListItem>) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     // Usually involves inflating a layout from XML and returning the holder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,7 +23,7 @@ class ListAdapter (val listOfItems: List<String>) : RecyclerView.Adapter<ListAda
         // Get the data model based on position
         val item = listOfItems[position]
         // Set item views based on your views and data model
-        holder.textView.text = item
+        holder.textView.text = item.toString()
     }
 
     // Returns the total count of items in the list
